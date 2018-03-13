@@ -1,0 +1,44 @@
+{
+  "name": "tailwind-webpack-hot-purgecss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "./node_modules/.bin/tailwind init tailwind",
+    "start": "./node_modules/.bin/webpack-dev-server --inline --hot",
+    "build": "./node_modules/.bin/webpack .",
+    "build-min": "./node_modules/.bin/webpack . -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spring3/tailwind-webpack-hot-purgecss.git"
+  },
+  "keywords": [
+    "webpack",
+    "hot-reload",
+    "css",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spring3/tailwind-webpack-hot-purgecss/issues"
+  },
+  "homepage": "https://github.com/Spring3/tailwind-webpack-hot-purgecss#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "glob-all": "^3.1.0",
+    "html-webpack-plugin": "^3.0.6",
+    "postcss": "^6.0.19",
+    "postcss-loader": "^2.1.1",
+    "purgecss-from-html": "^1.0.0",
+    "purgecss-webpack-plugin": "^0.20.1",
+    "reload-html-webpack-plugin": "^0.1.2",
+    "style-loader": "^0.20.3",
+    "tailwindcss": "^0.4.3",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.2",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
