@@ -10,12 +10,13 @@ const glob = require('glob-all');
 const tailwindcss = require('tailwindcss');
 
 const isRelease = process.argv.indexOf('-p') !== -1;
+const bundleName = `styles${isRelease ? '.min' : ''}.css`;
 
 module.exports = {
   entry: './index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'styles.css'
+    filename: bundleName
   },
   externals: [nodeExternals()],
   module: {
@@ -46,7 +47,7 @@ module.exports = {
     watchContentBase: true
   },
   plugins: [
-    new ExtractTextPlugin("styles.css"), 
+    new ExtractTextPlugin(bundleName), 
     new ReloadPlugin(),
     new HtmlWebpackPlugin({
       template: './index.html'
